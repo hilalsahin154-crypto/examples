@@ -24,37 +24,46 @@
 //            break;
 //    }
 //}
-    
+
 
 #endregion
 
 #region 2. Kısım
-static double DortIslemGeriDonuslu(int sayi1, int sayi2, DortIslem islemTipi)
-{
-    switch (islemTipi)
-    {
-        case DortIslem.Toplama:
-            return sayi1 + sayi2;
-        case DortIslem.Cıkartma:
-            return sayi1 - sayi2;
-        case DortIslem.Bolme:
-            return sayi1 / sayi2;
-        case DortIslem.Carpma:
-            return sayi1 * sayi2;
-        default:
-            return 0;
-    }
-}
-double sonuc = DortIslemGeriDonuslu(4, 2, DortIslem.Toplama);
-Console.WriteLine($"Toplama işleminin sonucu: {sonuc}");
+//static double DortIslemGeriDonuslu(int sayi1, int sayi2, DortIslem islemTipi)
+//{
+//    switch (islemTipi)
+//    {
+//        case DortIslem.Toplama:
+//            return sayi1 + sayi2;
+//        case DortIslem.Cıkartma:
+//            return sayi1 - sayi2;
+//        case DortIslem.Bolme:
+//            return sayi1 / sayi2;
+//        case DortIslem.Carpma:
+//            return sayi1 * sayi2;
+//        default:
+//            return 0;
+//    }
+//}
+//double sonuc = DortIslemGeriDonuslu(4, 2, DortIslem.Toplama);
+//Console.WriteLine($"Toplama işleminin sonucu: {sonuc}");
 
+
+
+//enum DortIslem
+//{
+//    Toplama,
+//    Cıkartma,
+//    Bolme,
+//    Carpma
+//}
 
 #endregion
 
-enum DortIslem
-{
-    Toplama,
-    Cıkartma,
-    Bolme,
-    Carpma
-}
+using Metods;
+
+OgrenciIsler ogrenci=new OgrenciIsler();
+ogrenci.SelamVer();
+ogrenci.SelamVer("Hilal");
+Console.WriteLine($"Yasınız parametresiz: {ogrenci.YasHesapla()}");
+Console.WriteLine($"Yasınız pareli: {ogrenci.YasHesapla(2001)}");
