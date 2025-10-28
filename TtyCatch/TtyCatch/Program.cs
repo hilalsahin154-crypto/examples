@@ -9,5 +9,4 @@ catch (Exception)
 {
 	Console.WriteLine("Uygulama hata verdi ama sen uygulamayı kullanmaya hala devam edebilirsin");
 	goto Baslangic;
-
 }
