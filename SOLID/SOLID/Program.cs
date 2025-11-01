@@ -1,5 +1,5 @@
 ﻿#region SINGLE RESPONSIBILITY PRINCIPLE(Tek Sorunluluk)
-//// Bir sınıf yalnızca bir sorumluluğa sahip olmalıdır. Değişiklik gereksinimi yanlızca bu sorumluluğa göre olmalıdır
+//// bir sınıf yalnızca bir sorumluluğa sahip olmalıdır. değişiklik gereksinimi yanlızca bu sorumluluğa göre olmalıdır
 //using SOLID.SingleResponsibilty;
 
 //StudentSevice studentSevice = new StudentSevice();
@@ -21,14 +21,45 @@
 
 #endregion
 #region  LISKOV SUBSTİTUTION PRICIPLE
-// Alt sınıflar, üst sınıfların yerine geçmeli ve sistem doğru şekilde çalışmaya 
+//// Alt sınıflar, üst sınıfların yerine geçmeli ve sistem doğru şekilde çalışmaya 
 
-using SOLID.LiskovSubstitution;
+//using SOLID.LiskovSubstitution;
 
-Eagle eagle = new Eagle();
-eagle.Fly();
+//Eagle eagle = new Eagle();
+//eagle.Fly();
 
-Penguen penguen = new Penguen();
-penguen.Fly();
+//Penguen penguen = new Penguen();
+//penguen.Fly();
+
+#endregion
+#region INTERFACE SEGREGATITON
+//using SOLID.InterfaceSegregation;
+//using SOLID.InterfaceSegregation.Machine;
+
+//Human human = new Human();
+//Bird bird = new Bird();
+
+//human.Work();
+//human.Talk();
+
+//bird.Work();
+//bird.Talk();
+//bird.Fly();
+
+//WashingMachine washingMachine = new WashingMachine();
+//DeepFrezee deepFrezee = new DeepFrezee();
+
+//deepFrezee.ElekricUs();
+//deepFrezee.Freez();
+
+//washingMachine.ElekricUs();
+//washingMachine.Wosh();
+#endregion
+#region DEPENDENCY INVERSION
+
+//using SOLID.Dependencyllnversion;
+
+//Order order = new Order();
+//order.Onayla();
 
 #endregion
