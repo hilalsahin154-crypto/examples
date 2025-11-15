@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DesignPattens.Student
 {
-    internal class StudentService : IStudentService
+    public class StudentService : IStudentService
     {
         public Logger _logger;
         public StudentService(Logger? log) => _logger = log;
@@ -20,7 +20,7 @@ namespace DesignPattens.Student
         public void Delete()
         {
             Console.WriteLine("Ögrenci sistemden silindi");
-            _logger.Log("Kullanıcı sisteme öğrençi silindi");
+            _logger.Log("Kullanıcı sisteme öğrenci silindi");
         }
 
         public void List()
