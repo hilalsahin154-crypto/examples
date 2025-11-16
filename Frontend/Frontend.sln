@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36511.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		index.html = index.html
+		Style.css = Style.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "library", "library", "{1B86C7B3-EF00-414D-A770-9233E11D2C7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{D7AFF99B-AD8C-4B8D-A7DF-4C8B7450963C}"
+	ProjectSection(SolutionItems) = preProject
+		library\images\facebook.png = library\images\facebook.png
+		..\..\..\images.jpeg = ..\..\..\images.jpeg
+		library\images\instagram.png = library\images\instagram.png
+		library\images\linkedin.png = library\images\linkedin.png
+		..\..\..\slider.png = ..\..\..\slider.png
+		library\images\twitter.png = library\images\twitter.png
+		library\images\whatsapp.png = library\images\whatsapp.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1B86C7B3-EF00-414D-A770-9233E11D2C7E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{D7AFF99B-AD8C-4B8D-A7DF-4C8B7450963C} = {1B86C7B3-EF00-414D-A770-9233E11D2C7E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98CAFA66-BFC4-436E-8A18-690329702DA7}
+	EndGlobalSection
+EndGlobal

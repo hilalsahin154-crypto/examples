@@ -1,4 +1,5 @@
 ﻿using DesignPattens.MeyvSuyuFactory.Singleton;
+using DesignPattens.Singleton;
 using System;
 using System.Collections.Generic;
 using System.Linq;
