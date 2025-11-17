@@ -13,12 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "library", "library", "{1B86
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{D7AFF99B-AD8C-4B8D-A7DF-4C8B7450963C}"
 	ProjectSection(SolutionItems) = preProject
+		..\..\..\alisveris.webp = ..\..\..\alisveris.webp
+		..\..\..\altin.webp = ..\..\..\altin.webp
 		library\images\facebook.png = library\images\facebook.png
 		..\..\..\images.jpeg = ..\..\..\images.jpeg
 		library\images\instagram.png = library\images\instagram.png
 		library\images\linkedin.png = library\images\linkedin.png
 		..\..\..\slider.png = ..\..\..\slider.png
 		library\images\twitter.png = library\images\twitter.png
+		..\..\..\uzay.jpg = ..\..\..\uzay.jpg
 		library\images\whatsapp.png = library\images\whatsapp.png
 	EndProjectSection
 EndProject

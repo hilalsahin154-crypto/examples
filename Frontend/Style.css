@@ -22,7 +22,7 @@
 
             body .container .header .logo {
                 float: left;
-                width: 125px;
+                width: 90px;
                 height: 100%;
             }
 
@@ -35,6 +35,8 @@
                 width: 825px;
                 float: left;
                 height: 100%;
+                display: flex;
+                justify-content: flex-end;
                 margin: 30px 0 0 0;
             }
 
@@ -59,6 +61,25 @@
             width: 100%;
             height: 400px;
             background: #9038a2;
+        }
+
+        body .container .news {
+            text-align: center; 
+            margin-top: 10px;
+            font-size: 0; 
+        }
+
+            body .container .news a {
+                display: inline-block;
+                margin: 0 10px; 
+                font-size: initial;
+            }
+
+        body .container .quote {
+            text-align: center;
+            font-size: 20px;
+            color: #375ff6;
+            font-style: italic;
         }
 
         body .container .footer {
