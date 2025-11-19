@@ -20,9 +20,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{D7AFF9
 		library\images\instagram.png = library\images\instagram.png
 		library\images\linkedin.png = library\images\linkedin.png
 		..\..\..\slider.png = ..\..\..\slider.png
-		library\images\twitter.png = library\images\twitter.png
+		..\..\..\tiktok.png = ..\..\..\tiktok.png
 		..\..\..\uzay.jpg = ..\..\..\uzay.jpg
 		library\images\whatsapp.png = library\images\whatsapp.png
+		..\..\..\x.png = ..\..\..\x.png
 	EndProjectSection
 EndProject
 Global
