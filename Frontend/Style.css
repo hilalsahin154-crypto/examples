@@ -65,13 +65,13 @@
 
         body .container .news {
             text-align: center; 
-            margin-top: 10px;
+            margin-top: 5px;
             font-size: 0; 
         }
 
             body .container .news a {
                 display: inline-block;
-                margin: 0 10px; 
+                margin: 0 5px; 
                 font-size: initial;
             }
 
