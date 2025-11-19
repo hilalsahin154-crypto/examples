@@ -64,15 +64,13 @@
         }
 
         body .container .news {
-            text-align: center; 
+            display: flex;
+            justify-content: space-between;
             margin-top: 5px;
-            font-size: 0; 
         }
 
-            body .container .news a {
-                display: inline-block;
-                margin: 0 5px; 
-                font-size: initial;
+            body .container .news a  {
+                object-fit: cover;
             }
 
         body .container .quote {
