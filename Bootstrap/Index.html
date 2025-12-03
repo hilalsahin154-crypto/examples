@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, inital-scale=1.0" />
+    <title>Bootstap Examples</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="bg-light">
+
+        <!-- NAVBAR (Bootstrap hazır şablon) -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <div class="container">
+
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="library/images/images.jpeg" height="50" class="me-2">
+                    <strong>Haber Sitesi</strong>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://google.com">Anasayfa</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://mgm.gov.tr/">Hava Durumu</a>
+                        </li>
+
+                        <!-- DROPDOWN BURADA -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Magazin
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><h6 class="dropdown-header">Kategoriler</h6></li>
+                                <li><a class="dropdown-item" href="https://onedio.com/magazin">Son Magazin Hbarleri</a></li>
+                                <li><a class="dropdown-item" href="https://onedio.com/magazin/unluler-dosyasi">Ünlüler</a></li>
+                                <li><a class="dropdown-item" href="https://onedio.com/dizi-film">Dizi & Film</a></li>
+                            </ul>
+                        </li>
+                        <!-- DROPDOWN BİTTİ -->
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.fanatik.com.tr/">Spor Haberleri</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.sabah.com.tr/sari-sayfalar">Sarı sayfalar</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+    <!-- SLIDER -->
+    <div id="slider" class="container mt-3">
+        <div class="card shadow">
+            <img src="library/images/slider.png"
+                 class="card-img-top"
+                 style="height: 400px; object-fit: cover;"
+                 onclick="selamla()">
+        </div>
+    </div>
+
+    <!-- HABERLER - CARD TASARIM -->
+    <div class="container mt-4">
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="library/images/alisveris.webp" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Alışveriş</h5>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Devamı</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="library/images/altin.webp" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Altın Fiyatları</h5>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Devamı</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <img src="library/images/uzay.jpg" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Uzay Araştırmaları</h5>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Devamı</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ALINTI -->
+    <div class="container text-center my-4">
+        <p class="quote">"Bilgi, paylaştıkça çoğalır."</p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light py-3 mt-4">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <div>
+                <a href="https://google.com" class="text-light me-3">Anasayfa</a>
+                <a href="https://mgm.gov.tr/" class="text-light me-3">Hava Durumu</a>
+                <a href="https://onedio.com/magazin" class="text-light me-3">Magazin</a>
+                <a href="https://www.fanatik.com.tr/" class="text-light me-3">Spor Haberleri</a>
+                <a href="https://www.sabah.com.tr/sari-sayfalar" class="text-light me-3">Sarı sayfalar</a>
+                <a href="#" class="text-light">İletişim</a>
+            </div>
+
+            <div class="d-flex gap-3">
+                <a class="social-icon" href="https://www.facebook.com/?locale=tr_TR"><img src="library/images/facebook.png"></a>
+                <a class="social-icon" href="https://x.com/?lang=tr"><img src="library/images/x.png"></a>
+                <a class="social-icon" href="https://www.instagram.com/"><img src="library/images/instagram.png"></a>
+                <a class="social-icon" href="https://www.linkedin.com/?trk=guest_homepage-basic_nav-header-logo"><img src="library/images/linkedin.png"></a>
+                <a class="social-icon" href="https://www.whatsapp.com/?lang=tr"><img src="library/images/whatsapp.png"></a>
+                <a class="social-icon" href="https://www.tiktok.com/login?lang=tr-TR&type=ageVerify&enter_method=ageVerify&en"><img src="library/images/tiktok.png"></a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function selamla() {
+            alert("Haber Sitesine Hoş geldin :) ");
+        }
+    </script>
+
+</body>
+</html>

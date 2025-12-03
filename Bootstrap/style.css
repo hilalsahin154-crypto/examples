@@ -1,0 +1,19 @@
+﻿.navbar .navbar-nav {
+    align-items: flex-start;
+}
+
+.quote {
+    font-size: 22px;
+    font-style: italic;
+    color: #375ff6;
+}
+
+.social-icon img {
+    width: 30px;
+}
+
+.card-img-top {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+}
