@@ -1,0 +1,32 @@
+﻿@using MVC.Models.ViewModels
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model StudentViewModel
+<h1>Oğrenci Ekle</h1>
+<form method="post">
+    <div class="col-3">
+        <label asp-for="Name" class="col-form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <div id="passworrHelpBloc" class="form-text">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-3">
+        <label asp-for="Email" class="col-form-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <div id="passworrHelpBloc" class="form-text">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-3">
+        <label asp-for="Age" class="col-form-label"></label>
+        <input asp-for="Age" class="form-control" />
+        <div id="passworrHelpBloc" class="form-text">
+            <span asp-validation-for="Age" class="text-danger"></span>
+        </div>
+    </div>
+</form>
+
