@@ -1,0 +1,19 @@
+﻿@using MVC.Models.ViewModels
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Ürün Ekle</h1>
+@model Product
+
+
+<form method="post" class="row g-3">
+    <div class="col-auto">
+        <label for="inputPassword2" class="visually-hidden">Ürün Adı</label>
+        <input asp-for="Name" class="form-control" placeholder="Ürün adı" />
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Ürün Kaydet</button>
+    </div>
+</form>

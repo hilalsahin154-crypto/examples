@@ -1,0 +1,18 @@
+﻿@using MVC.Models.ViewModels
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Product
+<h1>Ürün Sil</h1>
+<a class="link-primary" asp-controller="Product" asp-action="Index">Geri Dön</a>
+<form method="post" class="row g-3">
+    <input type="hidden" asp-for="Id" />
+    <div class="alert alert-danger" role="alert">
+        Bu kaydı silmek istediğinizden emin misiniz? (@Model.Name)
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Ürünü Sil !</button>
+    </div>
+</form>
