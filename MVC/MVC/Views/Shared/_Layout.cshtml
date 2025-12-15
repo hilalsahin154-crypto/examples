@@ -10,53 +10,57 @@
 </head>
 <body>
     <header>
-    <nav class="navbar navbar-expand-lg shadow"
+        <nav class="navbar navbar-expand-lg shadow"
              style="background: linear-gradient(90deg, #E6A9EC );">
 
-        <div class="container">
+            <div class="container">
 
-            <!-- Logo -->
-            <a class="navbar-brand text-white fw-bold d-flex align-items-center"
-               asp-controller="Home" asp-action="Index"
-               style="letter-spacing: 1px; font-size: 22px;">
-                <span class="me-2">🐾</span> Hilal Petshop
-            </a>
+                <!-- Logo -->
+                <a class="navbar-brand text-white fw-bold d-flex align-items-center"
+                   asp-controller="Home" asp-action="Index"
+                   style="letter-spacing: 1px; font-size: 22px;">
+                    <span class="me-2">🐾</span> Hilal Petshop
+                </a>
 
-            <!-- Mobile Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarGradient" aria-expanded="false">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- Mobile Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarGradient" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <!-- Menu -->
-            <div class="collapse navbar-collapse" id="navbarGradient">
-                <ul class="navbar-nav ms-auto">
+                <!-- Menu -->
+                <div class="collapse navbar-collapse" id="navbarGradient">
+                    <ul class="navbar-nav ms-auto">
 
-                    <li class="nav-item">
-                        <a class="nav-link text-white" asp-controller="Home" asp-action="Index"><i class="bi bi-house-door"></i> Anasayfa
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Home" asp-action="Index">
+                                <i class="bi bi-house-door"></i> Anasayfa
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link text-white" asp-controller="Home" asp-action="Privacy"><i class="bi bi-shield-lock"></i> Hakkımızda
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Home" asp-action="Privacy">
+                                <i class="bi bi-shield-lock"></i> Hakkımızda
+                            </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link text-white" asp-controller="Product" asp-action="Index"><i class="bi bi-bag"></i> Ürünler
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                            <a class="nav-link text-white" asp-controller="Student" asp-action="Create"><i class="bi bi-bag"></i> Ögrenci
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Product" asp-action="Index">
+                                <i class="bi bi-bag"></i> Ürünler
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-controller="Student" asp-action="Create">
+                                <i class="bi bi-bag"></i> Ögrenci
+                            </a>
+                        </li>
 
-                </ul>
+                    </ul>
+                </div>
+
             </div>
-
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
     <div class="container">
         <main role="main" class="pb-3">
@@ -65,8 +69,16 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - MVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Gizlilik</a>
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                &copy; 2025 - MVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Gizlilik</a>
+            </div>
+            <div class="d-flex gap-3">
+                <a class="social-icon" href="https://www.whatsapp.com/?lang=tr"><img src="~/images/whatsapp.png"></a>
+                <a class="social-icon" href="https://www.instagram.com/"><img src="~/images/instagram.png"></a>
+                <a class="social-icon" href="https://x.com/?lang=tr"><img src="~/images/x.png"></a>
+                <a class="social-icon" href="https://www.tiktok.com/login?lang=tr-TR&type=ageVerify&enter_method=ageVerify&en"><img src="~/images/tiktok.png"></a>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -75,3 +87,4 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+

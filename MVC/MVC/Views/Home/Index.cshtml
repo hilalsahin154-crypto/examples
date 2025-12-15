@@ -2,7 +2,111 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Hilal Petshop</h1>
-    <p>Petshop uygulamısıdır.</p>
+<style>
+
+    .carousel-img {
+        width: 100%;
+        height: 600px; /* hepsi aynı yükseklik */
+        object-fit: cover; /* kırpar ama bozulmaz */
+    }
+
+    .product-card img {
+        height: 220px;
+        object-fit: contain;
+        padding: 15px;
+    }
+
+    .price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #2c7be5;
+    }
+</style>
+
+
+<div class="container my-4">
+
+    <!-- Carousel -->
+    <div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-inner rounded shadow">
+
+            <div class="carousel-item active">
+                <img src="~/images/kedi.jpg" class="d-block w-100 carousel-img" alt="Kedi">
+            </div>
+
+            <div class="carousel-item">
+                <img src="~/images/kopek.jpg" class="d-block w-100 carousel-img" alt="Köpek">
+            </div>
+
+            <div class="carousel-item">
+                <img src="~/images/kus.jpg" class="d-block w-100 carousel-img" alt="Kuş">
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+
+
+    <!-- ÜRÜNLER -->
+    <div class="row g-4">
+
+
+        <div class="col-md-3">
+            <div class="card product-card h-100 text-center">
+                <img src="/images/kedi-oyuncak.webp" class="card-img-top" />
+                <div class="card-body">
+                    <h6 class="card-title">Kedi Tırmalama Ağacı</h6>
+                    <div class="price">1.250 ₺</div>
+                    <button class="btn btn-success w-100 mt-2">Sepete Ekle</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-3">
+            <div class="card product-card h-100 text-center">
+                <img src="/images/tasima-cantası.jpg" class="card-img-top" />
+                <div class="card-body">
+                    <h6 class="card-title">Köpek Taşıma Çantası</h6>
+                    <div class="price">950 ₺</div>
+                    <button class="btn btn-success w-100 mt-2">Sepete Ekle</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-3">
+            <div class="card product-card h-100 text-center">
+                <img src="/images/yatak.webp" class="card-img-top" />
+                <div class="card-body">
+                    <h6 class="card-title">Kedi Yatağı</h6>
+                    <div class="price">720 ₺</div>
+                    <button class="btn btn-success w-100 mt-2">Sepete Ekle</button>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-3">
+            <div class="card product-card h-100 text-center">
+                <img src="/images/kopek-tasması.webp" class="card-img-top" />
+                <div class="card-body">
+                    <h6 class="card-title">Köpek Göğüs Tasması</h6>
+                    <div class="price">430 ₺</div>
+                    <button class="btn btn-success w-100 mt-2">Sepete Ekle</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 </div>
