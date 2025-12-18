@@ -1,10 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using MVC.Models.ViewModels;
 
 namespace MVC.Controllers
 {
     public class ProductController : Controller
     {
+        public override void OnActionExecuting(ActionExecutingContext context)
+        {
+            if (Request.Cookies["username"] == null)
+            {
+                context.Result =
+                    new RedirectToActionResult("Login", "Customer", null);
+            }
+
+            base.OnActionExecuting(context);
+        }
         private static List<Product> _products = new List<Product> {
         new Product{ Id = 1, Name = "Kedi Maması" },
         new Product{ Id = 2, Name = "Köpek Maması" },

@@ -1,0 +1,36 @@
+﻿@using MVC.Models.ViewModels
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model CustomerViewModel
+
+<div class="d-flex justify-content-center align-items-center" style="min-height:70vh;">
+    <div class="card shadow-lg p-4" style="width:400px;">
+
+        <h3 class="text-center mb-4">🐾 Giriş Yap 🐾</h3>
+
+        <form asp-action="Login" method="post">
+
+            <div class="mb-3">
+                <label asp-for="Username" class="form-label"></label>
+                <input asp-for="Username" class="form-control" placeholder="Kullanıcı adını yaz" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" type="password" class="form-control" placeholder="Şifreni yaz" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <button class="btn w-100" style="background-color:#c77dff; border-color:#c77dff">Giriş Yap</button>
+
+            <div class="text-danger mt-3">
+                @Html.ValidationSummary()
+            </div>
+
+        </form>
+    </div>
+</div>
