@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVC_Petshop</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MVC_Petshop.styles.css" asp-append-version="true" />
+</head>
+
+
+<body>
+    <header>
+        
+        <!-- ===== ÜST NAVBAR ===== -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container d-flex align-items-center">
+
+                <!-- LOGO -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="~/img/logo.png"
+                         alt="Logo"
+                         width="60"
+                         height="60"
+                         class="me-3">
+
+                    <span style="
+                        font-size:22px;
+                        font-weight:700;
+                        color:#E6A9EC;
+                        letter-spacing:1px;">
+                        🐾 Hilal Petshop 🐾
+                    </span>
+                </a>
+                <!-- ARAMA -->
+                <form class="d-flex mx-auto" style="width:40%;">
+                    <input class="form-control me-2" type="search" placeholder="Ürün ara...">
+                    <button class="btn btn-outline-primary">Ara</button>
+                </form>
+
+                <!-- SEPET + GİRİŞ -->
+                <div class="d-flex align-items-center gap-2">
+                    <a href="#" class="btn btn-outline-success btn-sm rounded-pill px-3">
+                        <i class="bi bi-cart3 me-1"></i> Sepetim
+                    </a>
+                    <a href="/Customer/Login" class="btn btn-primary btn-sm rounded-pill px-3 shadow-sm">
+                        <i class="bi bi-person me-1"></i> Giriş
+                    </a>
+                </div>
+
+            </div>
+        </nav>
+
+       
+        
+        
+
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                &copy; 2026 - MVC_Petshop - <a asp-area="" asp-controller="Home" asp-action="Privacy">Gizlilik</a>
+            </div>
+            <div class="d-flex gap-3">
+                <a class="social-icon" href="https://www.whatsapp.com/?lang=tr"><img src="~/img/whatsapp.png"></a>
+                <a class="social-icon" href="https://www.instagram.com/"><img src="~/img/instagram.png"></a>
+                <a class="social-icon" href="https://x.com/?lang=tr"><img src="~/img/x.png"></a>
+                <a class="social-icon" href="https://www.tiktok.com/login?lang=tr-TR&type=ageVerify&enter_method=ageVerify&en"><img src="~/img/tiktok.png"></a>
+            </div>
+        </div>
+        
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

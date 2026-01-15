@@ -1,0 +1,66 @@
+﻿@using MVC_Petshop.Models
+
+@model (List<Category> Categories, List<Product> Products)
+
+<div style="background-color:#E6A9EC;">
+    <div class="container">
+        <ul class="nav justify-content-center py-1">
+            @{
+                var mainCategories = Model.Categories?
+                .Where(c => string.IsNullOrEmpty(c.ParentId))
+                .ToList() ?? new List<Category>();
+            }
+
+            @foreach (var category in mainCategories)
+            {
+                <li class="nav-item mx-5">
+                    <a class="nav-link text-white fw-semibold"
+                       href="#"
+                       style="font-size:16px; padding:4px 0; letter-spacing:1.5px;">
+                        @category.Name
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+@{
+    var products = Model.Products ?? new List<Product>();
+}
+
+<div class="container mt-4">
+    <div class="row">
+        @foreach (var item in products)
+        {         
+            var img = item.ProductImages?.FirstOrDefault(x => x.IsCurrent && x.IsActive);
+
+            <div class="col-md-3 mb-4">
+                <a asp-controller="Home"
+                   asp-action="Detail"
+                   asp-route-id="@item.Id"
+                   class="text-decoration-none text-dark">
+
+                    <div class="card product-card h-100">
+                        <img src="@(img != null ? img.ImageUrl : "/images/no-image.jpg")"
+                             class="card-img-top product-img"
+                             alt="@item.Name"
+                             style="height: 300px; width: 100%; object-fit: contain; background-color: #f8f9fa;" />
+
+                        <div class="card-body">
+                            <h6 class="product-title">
+                                @item.Name
+                            </h6>
+                            <p class="small text-muted">
+                                @item.ShortDescription
+                            </p>
+                            <div class="price fw-bold">
+                                @item.Price.ToString("N0") ₺
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
