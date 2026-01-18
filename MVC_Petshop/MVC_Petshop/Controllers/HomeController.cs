@@ -25,7 +25,17 @@ namespace MVC_Petshop.Controllers
                 .ToList();
             return View((categories, products));
         }
-
+        public IActionResult Detail(int id)
+        {
+            var product = _projectContext.Products
+               .Include(p => p.Brand)
+               .Include(p => p.ProductImages) 
+               .Include(p => p.ProductColors).ThenInclude(pc => pc.Color)
+               .Include(p => p.ProductSizes).ThenInclude(ps => ps.Size)
+               .Include(p => p.ProductProperties)
+               .FirstOrDefault(x => x.Id == id && x.IsActive);
+            return View(product);
+        }
         public IActionResult Privacy()
         {
             return View();

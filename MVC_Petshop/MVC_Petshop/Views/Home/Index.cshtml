@@ -42,22 +42,51 @@
                    class="text-decoration-none text-dark">
 
                     <div class="card product-card h-100">
-                        <img src="@(img != null ? img.ImageUrl : "/images/no-image.jpg")"
-                             class="card-img-top product-img"
-                             alt="@item.Name"
-                             style="height: 300px; width: 100%; object-fit: contain; background-color: #f8f9fa;" />
+                        <div id="p-@item.Id" class="carousel slide" style="background-color: #f8f9fa;">
+                            <div class="carousel-inner">
+                                @if (item.ProductImages != null && item.ProductImages.Any())
+                                {
+                                    var images = item.ProductImages.ToList();
+                                    for (int i = 0; i < images.Count; i++)
+                                    {
+                                        <div class="carousel-item @(i == 0 ? "active" : "")">
+                                            <div class="d-flex align-items-center justify-content-center" style="height:220px;">
+                                                <img src="@images[i].ImageUrl"
+                                                     class="d-block"
+                                                     style="max-height: 100%; max-width: 100%; width: auto; object-fit: contain;">
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+ 
+                            @if (item.ProductImages?.Count > 1)
+                            {
+                                <button class="carousel-control-prev" data-bs-target="#p-@item.Id" data-bs-slide="prev"><span class="carousel-control-prev-icon bg-secondary rounded-circle"></span></button>
+                                <button class="carousel-control-next" data-bs-target="#p-@item.Id" data-bs-slide="next"><span class="carousel-control-next-icon bg-secondary rounded-circle"></span></button>
+                            }
+                        </div>
 
                         <div class="card-body">
+
                             <h6 class="product-title">
                                 @item.Name
                             </h6>
+
                             <p class="small text-muted">
                                 @item.ShortDescription
                             </p>
+
                             <div class="price fw-bold">
-                                @item.Price.ToString("N0") ₺
+                                @item.Price.ToString() ₺
                             </div>
+
+                            <button class="btn btn-primary btn-sm w-100 d-flex align-items-center justify-content-center gap-2"
+                                    onclick="addToCart(@item.Id)">
+                                <i class="bi bi-cart-plus"></i> Sepete Ekle
+                            </button>
                         </div>
+
                     </div>
                 </a>
             </div>
