@@ -81,7 +81,7 @@
                                 @item.Price.ToString() ₺
                             </div>
 
-                            <button class="btn btn-primary btn-sm w-100 d-flex align-items-center justify-content-center gap-2"
+                            <button class="btn btn-lila btn-sm w-100 d-flex align-items-center justify-content-center gap-2"
                                     onclick="addToCart(@item.Id)">
                                 <i class="bi bi-cart-plus"></i> Sepete Ekle
                             </button>
@@ -93,3 +93,19 @@
         }
     </div>
 </div>
+<style>
+    .btn-lila {
+        background-color: #b57edc !important;
+        color: #fff !important;
+        border: none !important;
+    }
+
+        .btn-lila:hover {
+            background-color: #9f6cc7 !important;
+            color: #fff !important;
+        }
+
+        .btn-lila:active {
+            background-color: #8b5fbf !important;
+        }
+</style>
