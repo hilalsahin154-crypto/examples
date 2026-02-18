@@ -28,7 +28,7 @@ public partial class AppDbContext : DbContext
     {
         modelBuilder.Entity<Author>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Authors__3214EC072F1C583F");
+            entity.HasKey(e => e.Id).HasName("PK__Authors__3214EC07C1CC6D28");
 
             entity.Property(e => e.Country).HasMaxLength(50);
             entity.Property(e => e.CreatedAt)
@@ -39,7 +39,7 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<Book>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Books__3214EC07C3427552");
+            entity.HasKey(e => e.Id).HasName("PK__Books__3214EC071D484C68");
 
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")

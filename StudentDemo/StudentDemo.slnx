@@ -1,5 +1,0 @@
-<Solution>
-  <Project Path="StudentDemo.Core/StudentDemo.Core.csproj" />
-  <Project Path="StudentDemo.Data/StudentDemo.Data.csproj" />
-  <Project Path="StudentDemo/StudentDemo.API.csproj" />
-</Solution>
